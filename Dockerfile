@@ -2,6 +2,8 @@
 # Use an official Maven image as a parent image
 FROM maven:latest
 
+LABEL authors="anni"
+
 # Set the working directory in the container
 WORKDIR /app
 
@@ -15,4 +17,5 @@ COPY . /app/
 RUN mvn package
 
 # Run the main class (assuming your application has a main class)
-CMD ["java", "-jar", "target/calculator.jar"]
+CMD ["java", "-jar", "target/Calculator.jar"]
+
